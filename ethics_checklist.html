@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist tự đánh giá khía cạnh đạo đức đề cương nghiên cứu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .header img {
+            max-width: 150px;
+        }
+        h1, h2 {
+            color: #0066cc;
+        }
+        h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 80px;
+        }
+        .checkbox-group {
+            margin: 5px 0;
+        }
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+        .signature-line {
+            border-top: 1px solid #333;
+            width: 300px;
+            margin: 30px 0 5px;
+            display: inline-block;
+        }
+        .submit-btn {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #0055aa;
+        }
+        @media print {
+            .submit-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HỌC VIỆN QUÂN Y</h1>
+            <h2>HĐĐĐ NCYSH CẤP CƠ SỞ</h2>
+            <h3>CHECKLIST TỰ ĐÁNH GIÁ KHÍA CẠNH ĐẠO ĐỨC<br>ĐỀ CƯƠNG NGHIÊN CỨU TRONG Y SINH HỌC</h3>
+        </div>
+
+        <form id="ethicsChecklistForm">
+            <h2>I. THÔNG TIN ỨNG VIÊN</h2>
+            <div class="form-group">
+                <label for="fullName">Họ và tên:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="workplace">Cơ quan công tác:</label>
+                <input type="text" id="workplace" name="workplace" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Điện thoại:</label>
+                <input type="tel" id="phone" name="phone">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="major">Ngành dự tuyển:</label>
+                <input type="text" id="major" name="major" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="projectName">Tên đề tài:</label>
+                <input type="text" id="projectName" name="projectName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="researchPeriod">Thời gian nghiên cứu:</label>
+                <input type="text" id="researchPeriod" name="researchPeriod" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="researchType">Loại hình nghiên cứu:</label>
+                <select id="researchType" name="researchType" required>
+                    <option value="">-- Chọn loại hình nghiên cứu --</option>
+                    <option value="clinical">Nghiên cứu lâm sàng</option>
+                    <option value="intervention">Nghiên cứu can thiệp</option>
+                    <option value="biological">Thu thập mẫu sinh học</option>
+                    <option value="other">Khác</option>
+                </select>
+                <input type="text" id="otherResearchType" name="otherResearchType" style="margin-top: 5px; display: none;" placeholder="Xin mô tả loại hình nghiên cứu">
+            </div>
+
+            <h2>II. TỔNG THỂ ĐỀ CƯƠNG</h2>
+            <table>
+                <tr>
+                    <th width="5%">STT</th>
+                    <th width="65%">Nội dung</th>
+                    <th width="15%">Đã hoàn thành</th>
+                    <th width="15%">Ghi chú</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Đề cương trình bày đầy đủ các phần theo mẫu chuẩn (tên đề tài, đặt vấn đề, mục tiêu, phương pháp...)</td>
+                    <td><input type="checkbox" name="section1_1"></td>
+                    <td><input type="text" name="section1_note1"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Đề tài có tính mới, không trùng lặp, không đạo văn</td>
+                    <td><input type="checkbox" name="section1_2"></td>
+                    <td><input type="text" name="section1_note2"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Đã được chỉnh sửa theo góp ý của hội đồng chuyên môn và xác nhận của Chủ nhiệm Bộ môn</td>
+                    <td><input type="checkbox" name="section1_3"></td>
+                    <td><input type="text" name="section1_note3" placeholder="- Biên bản họp xét tuyển của hội đồng.&#10;- Bản cam kết hoàn thiện đề cương CÓ XÁC NHẬN CNBM"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Đã xác định rõ địa điểm nghiên cứu và thời gian dự kiến thu thập số liệu</td>
+                    <td><input type="checkbox" name="section1_4"></td>
+                    <td><input type="text" name="section1_note4" placeholder="- Địa điểm nghiên cứu?&#10;- Thời gian dự kiến thu thập số liệu"></td>
+                </tr>
+            </table>
+
+            <h2>III. KHÍA CẠNH ĐẠO ĐỨC</h2>
+            <table>
+                <tr>
+                    <th width="5%">STT</th>
+                    <th width="65%">Nội dung đánh giá</th>
+                    <th width="15%">Đã đảm bảo</th>
+                    <th width="15%">Ghi chú</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Có mô tả rõ đối tượng nghiên cứu; các tiêu chí chọn/loại trừ</td>
+                    <td><input type="checkbox" name="section2_1"></td>
+                    <td><input type="text" name="section2_note1" placeholder="Đối tượng nghiên cứu ghi rõ?"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Xác định được rõ các nguy cơ tiềm ẩn và biện pháp giảm thiểu rủi ro</td>
+                    <td><input type="checkbox" name="section2_2"></td>
+                    <td><input type="text" name="section2_note2"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Đảm bảo không gây tổn hại về thể chất, tinh thần hoặc danh dự cho người tham gia</td>
+                    <td><input type="checkbox" name="section2_3"></td>
+                    <td><input type="text" name="section2_note3"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Có phiếu cung cấp thông tin cho người tham gia nghiên cứu</td>
+                    <td><input type="checkbox" name="section2_4"></td>
+                    <td><input type="text" name="section2_note4"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Có phiếu chấp thuận tham gia nghiên cứu, phù hợp với từng nhóm đối tượng</td>
+                    <td><input type="checkbox" name="section2_5"></td>
+                    <td><input type="text" name="section2_note5"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Nếu đối tượng là người dễ bị tổn thương có lý do hợp lý và biện pháp bảo vệ bổ sung</td>
+                    <td><input type="checkbox" name="section2_6"></td>
+                    <td><input type="text" name="section2_note6"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Cam kết không ép buộc, dụ dỗ, trả thù lao không hợp lý</td>
+                    <td><input type="checkbox" name="section2_7"></td>
+                    <td><input type="text" name="section2_note7"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Mô tả rõ biện pháp bảo mật thông tin cá nhân và dữ liệu nghiên cứu</td>
+                    <td><input type="checkbox" name="section2_8"></td>
+                    <td><input type="text" name="section2_note8"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Có quy trình lưu trữ, sử dụng, tiêu hủy mẫu sinh học (nếu có thu mẫu)</td>
+                    <td><input type="checkbox" name="section2_9"></td>
+                    <td><input type="text" name="section2_note9"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Khai báo xung đột lợi ích, nguồn tài trợ hoặc hỗ trợ kỹ thuật (nếu có)</td>
+                    <td><input type="checkbox" name="section2_10"></td>
+                    <td><input type="text" name="section2_note10"></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Không sử dụng người tham gia nghiên cứu vào mục đích thương mại hoặc ngoài phạm vi nghiên cứu</td>
+                    <td><input type="checkbox" name="section2_11"></td>
+                    <td><input type="text" name="section2_note11"></td>
+                </tr>
+            </table>
+
+            <h2>IV. TÀI LIỆU ĐÍNH KÈM</h2>
+            <table>
+                <tr>
+                    <th width="5%">STT</th>
+                    <th width="65%">Tài liệu</th>
+                    <th width="15%">Đã đính kèm</th>
+                    <th width="15%">Ghi chú</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Đơn xin đánh giá đạo đức trong nghiên cứu y sinh học</td>
+                    <td><input type="checkbox" name="section3_1"></td>
+                    <td><input type="text" name="section3_note1"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Quyết định thành lập hội đồng xét duyệt đề cương nghiên cứu, Biên bản họp xét tuyển của hội đồng.</td>
+                    <td><input type="checkbox" name="section3_2"></td>
+                    <td><input type="text" name="section3_note2"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bản cam kết hoàn thiện hồ sơ theo ý kiến của hội đồng chuyên môn</td>
+                    <td><input type="checkbox" name="section3_3"></td>
+                    <td><input type="text" name="section3_note3"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Đề cương nghiên cứu sau xét duyệt của hội đồng chuyên môn</td>
+                    <td><input type="checkbox" name="section3_4"></td>
+                    <td><input type="text" name="section3_note4"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Bản tóm tắt nghiên cứu</td>
+                    <td><input type="checkbox" name="section3_5"></td>
+                    <td><input type="text" name="section3_note5"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Chiến lược tuyển chọn và bảo vệ đối tượng tham gia nghiên cứu</td>
+                    <td><input type="checkbox" name="section3_6"></td>
+                    <td><input type="text" name="section3_note6"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Lý lịch khoa học của ứng viên nghiên cứu sinh</td>
+                    <td><input type="checkbox" name="section3_7"></td>
+                    <td><input type="text" name="section3_note7"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Phiếu cung cấp thông tin cho đối tượng tham gia nghiên cứu (ICF)</td>
+                    <td><input type="checkbox" name="section3_8"></td>
+                    <td><input type="text" name="section3_note8"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Phiếu chấp thuận tình nguyện tham gia nghiên cứu</td>
+                    <td><input type="checkbox" name="section3_9"></td>
+                    <td><input type="text" name="section3_note9"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Quy trình tuyển chọn đối tượng và thu thập phiếu cung cấp thông tin và chấp thuận tham gia nghiên cứu</td>
+                    <td><input type="checkbox" name="section3_10"></td>
+                    <td><input type="text" name="section3_note10"></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Quy trình theo dõi, đánh giá, xử trí biến cố bất lợi (nếu có)</td>
+                    <td><input type="checkbox" name="section3_11"></td>
+                    <td><input type="text" name="section3_note11"></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Bản cam kết thực hiện đúng nguyên tắc về đạo đức trong nghiên cứu của nghiên cứu viên</td>
+                    <td><input type="checkbox" name="section3_12"></td>
+                    <td><input type="text" name="section3_note12"></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Thư đồng thuận/Giấy xác nhận cho phép triển khai nghiên cứu của các cơ quan/tổ chức/địa điểm cùng phối hợp triển khai nghiên cứu</td>
+                    <td><input type="checkbox" name="section3_13"></td>
+                    <td><input type="text" name="section3_note13"></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Tài liệu liên quan khác (nếu có, ví dụ: biểu mẫu thu thập dữ liệu, bệnh án nghiên cứu, thư mời hợp tác, giấy phép...)</td>
+                    <td><input type="checkbox" name="section3_14"></td>
+                    <td><input type="text" name="section3_note14"></td>
+                </tr>
+            </table>
+
+            <h2>V. CAM KẾT CỦA NGHIÊN CỨU VIÊN</h2>
+            <div class="form-group">
+                <p>Tôi cam kết các nội dung trên là trung thực và đã được rà soát đầy đủ trước khi nộp Hội đồng Đạo đức trong nghiên cứu Y sinh học của Học viện Quân y.</p>
+                
+                <div class="form-group">
+                    <label for="completionDate">Ngày hoàn thành:</label>
+                    <input type="date" id="completionDate" name="completionDate" required>
+                </div>
+                
+                <div>
+                    <div class="signature-line"></div>
+                    <p>Ứng viên ký và ghi rõ họ tên:</p>
+                    <input type="text" id="signature" name="signature" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p><strong>* Các ứng viên hoàn thiện checklist và gửi file word kèm bản scan có chữ ký qua email: <a href="mailto:IRBH_VMMU@vmmu.edu.vn">IRBH_VMMU@vmmu.edu.vn</a> để Thư ký hội đồng sắp xếp lịch xét duyệt.</strong></p>
+            </div>
+
+            <button type="submit" class="submit-btn">Gửi đơn đăng ký</button>
+        </form>
+    </div>
+
+    <script>
+        // Show/hide other research type field
+        document.getElementById('researchType').addEventListener('change', function() {
+            const otherField = document.getElementById('otherResearchType');
+            if (this.value === 'other') {
+                otherField.style.display = 'block';
+                otherField.required = true;
+            } else {
+                otherField.style.display = 'none';
+                otherField.required = false;
+            }
+        });
+
+        // Form submission handling
+        document.getElementById('ethicsChecklistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to your server
+            // For this example, we'll just show an alert
+            alert('Đơn đăng ký đã được gửi thành công! Vui lòng gửi bản scan có chữ ký qua email theo hướng dẫn.');
+            
+            // You could also generate a PDF or print the form here
+            // window.print();
+        });
+    </script>
+</body>
+</html>
